@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--É o conjunto de caracteres usado na página da web.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Significa que o navegador irá definir a largura da página da web para a mesma largura da tela do dispositivo, e que a página será exibida em seu tamanho normal a primeira vez que for carregada-->
+    <title>Landing Page Mileva</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> <!--É a folha de estilo.-->
+</head>
+
+<body>
+    <!--Foi colocada a tag nav dentro de uma div de classe "container" que está dentro de uma outra div de classe "row" para padronizar todos os blocos/elementos do código html com as mesmas propriedades de CSS, como por exemplo a propriedade max-width: 1000px, que limita o tamanho dos elementos à 1000px mesmo que a largura da tela seja maior. Dentro do nav temos os botões CADASTRE-SE e ENTRE. Então foi criada uma div de classe "cadastrar" e outra div de classe "cadastrar entrar", pois algumas características, como as cores dos botões, são diferentes. Foram criadas ainda duas âncoras de nomes "cadastro entre" e "cadastro" para poder alterar os efeitos dos links. A string "javascript:void(0)" usada nas âncoras é um script JavaScript que não faz nada. O operador "void" retorna o valor undefined, que significa que o script não retorna nada.-->
+   <div class="row">
+        <div class="container">
+            <nav>
+                <img src="imagens/logomarcamileva.jpg" alt="Logomarca Mileva">
+                <div class="cadastrar entrar"><a href="javascript:void(0)" class="cadastro entre">ENTRE</a></div>
+                <div class="cadastrar"><a href="javascript:void(0)" class="cadastro">CADASTRE-SE</a></div>
+            </nav>
+        </div>
+    </div>
+
+    <!--Foi criada uma div de classe "promocional row", pois precisava que algumas propriedades relacionadas a fonte, cores e padding fossem diferentes da "row" neste bloco.-->
+    <div class="promocional row"><strong>GANHE 20%</strong> de desconto na sua primeira compra*</div>
+
+    <!--Foi colocado o header dentro de uma div de classe "container" que está dentro de uma outra div de classe "row" para padronizar todos os blocos/elementos do código html com as mesmas propriedades de CSS. Dentro da div de classe "container" foram criadas mais duas divs, uma de classe "header-left" e outra de classe "header right" para conseguir trabalhar melhor com a direção, espaçamento e alinhamento dos elementos do header. Dentro da div de classe "header left" foi criada mais uma div de classe "header-text" para poder inserir uma margem/espaçamento entre o texto e o botão CADASTRE-SE.-->
+    <header class="row">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-text-desktop">
+                    <h1>A Vassoura mais <br> Charmosa do Brasil</h1>
+                    <p>Vassoura Mileva <strong>Charmosa</strong> é a solução ideal para varrer cantos e espaços de difícil alcance da sua casa.</p>
+                </div>
+                <div class="header-text-mobile">
+                    <h1>A Vassoura mais Charmosa do Brasil</h1>
+                    <p>Vassoura Mileva <strong>Charmosa</strong> é a solução ideal para varrer cantos e espaços de difícil alcance da sua casa.</p>
+                </div>
+                <div class="cadastrar"><a href="javascript:void(0)" class="cadastro">CADASTRE-SE</a></div>
+            </div>
+            <div class="header-right">
+                <!--<picture>
+                    <source media="(max-width:700px)" srcset="imagens/charmosa.peq.png">-->
+                    <img src="imagens/charmosa.med.png" alt="Vass Charmosa">
+                    <!--</picture>-->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--Nesta section, além de usar as classes "row" e "container" para padronizar todos os blocos/elementos do código html com as mesmas propriedades de CSS, foi criada a classe "caracteristicas" para definir cor e padding específicos desta section, uma vez que são diferentes das demais sections do código. Além disso, foi criada uma div de classe "caractgrid" para reunir dentro dela todas as divs de classe "caractbox", que por sua vez contém outras divs de classes "caractimgbox" - para as imagens, "titulocaract" - para os títulos das características em questão, e "textocaract" - para os textos descritivos. Através da criação da "caractgrid" foi possível organizar a disposição das "caractbox" com o Display: flex;. As "caractbox" também permitiram manipular melhor os elementos dentro delas. As divs "caractimgbox", "titulocaract" e "textocaract" também foram criadas pois seus conteúdos precisaram de definições de propriedades distintas umas das outras.-->
+        <section class="caracteristicas row">
+            <div class="container">
+                <div class="caractgrid">
+                    <div class="caractbox">
+                        <div class="caractimgbox"><img src="imagens/reciclavel.png" alt="Reciclável"></div>
+                        <div class="titulocaract">Produto Sustentável</div>
+                        <div class="textocaract">Produzido com matérias-primas recicladas e de alta qualidade.</div>
+                    </div>
+                    <div class="caractbox">
+                        <div class="caractimgbox"><img src="imagens/cifrao.png" alt="Cifrão"></div>
+                        <div class="titulocaract">Descontos Progressivos</div>
+                        <div class="textocaract">Quanto maior for a sua compra, maior será o seu desconto.</div>
+                    </div>
+                    <div class="caractbox">
+                        <div class="caractimgbox desconto">GANHE <img class="peq" src="imagens/20porcento.png" alt="20porcento"></div>
+                        <div class="titulocaract">20% de Desconto</div>
+                        <div class="textocaract">Ganhe 20% de desconto na sua primeira compra.</div>
+                    </div>
+                    <div class="caractbox">
+                        <div class="caractimgbox"><img src="imagens/logistica.png" alt="Logística"></div>
+                        <div class="titulocaract">Frete Grátis</div>
+                        <div class="textocaract"> Receba na porta da sua casa sem custo.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Nesta section, além de usar as classes "row" e "container" para padronizar todos os blocos/elementos do código html com as mesmas propriedades de CSS, foi criada a classe "mixsolucoes" para definir cor e padding específicos desta section, uma vez que são diferentes das demais sections do código. Além disso, foi criada uma div de classe "mix" pois algumas propriedades de disposição dos elementos precisavam ser diferentes das do "container". A div de classe "mix" aloca a div de classe "mixsolucoes-text", que foi criada só para definir as propriedades do texto/enunciado, e a div de classe "mixgrid" que contém outras quatro divs de classe "mixbox", e que por sua vez contém outras divs de classe "miximgbox" - para definir propriedades das imagens. Da mesma forma que na section anterior, com a "mixgrid" foi possível organizar a disposição das "mixbox" com o Display: flex; e com as "mixbox" também foi possível manipular melhor os elementos dentro destas.-->
+        <section class="mixsolucoes row">
+            <div class="container mix">
+                <div class="mixsolucoes-text">
+                    <h2>Um Mix de Soluções em Limpeza</h2>
+                    <p>Com mais de 20 itens, nós temos tudo o que você precisa para a limpeza do seu lar. Conheça a nossa linha completa!</p>  
+                </div>  
+                <div class="mixgrid">
+                    <div class="mixbox">
+                        <div class="miximgbox"><img src="imagens/safira.jpg" alt="Vass Safira"></div>
+                        <a href="javascript:void(0)">VASSOURAS</a>
+                    </div>
+                    <div class="mixbox">
+                        <div class="miximgbox"><img src="imagens/rodos.jpg" alt="Rodos"></div>
+                        <a href="javascript:void(0)">RODOS</a>
+                    </div>
+                    <div class="mixbox">
+                        <div class="miximgbox"><img src="imagens/escovasovais.jpg" alt="Escovas Ovais"></div>
+                        <a href="javascript:void(0)">ESCOVAS</a>
+                    </div>
+                    <div class="mixbox">
+                        <div class="miximgbox"><img src="imagens/papegada.jpg" alt="Pa Pegada"></div>
+                        <a href="javascript:void(0)">PÁS DE LIXO</a>
+                    </div>
+                </div>
+                <div class="cadastrar"><a href="javascript:void(0)" class="cadastro">CADASTRE-SE</a></div>
+            </div>
+        </section>
+
+        <!--Nesta section o raciocício foi similar às duas sections anteriores, porém, com mais divs envolvidas.-->
+        <section class="avaliacoes row">
+            <div class="container aval">
+                <div class="avaliacoes-text">
+                    <h2>Avaliações 5 Estrelas no Google</h2>
+                    <p>Junte-se às dezenas de pessoas que já testaram e aprovaram os produtos Mileva.</p>
+                </div>
+                <div class="avaliacaogrid">
+                    <div class="avaliacaobox">
+                        <div class="avaliacaoimgbox"><img class="pessoa" src="imagens/wagner.png" alt="Wagner"></div>
+                        <div class="comentario">"Ótimo atendimento e produto de primeira."</div>
+                        <div class="avaliacaoimgbox"><img class="estrelas" src="imagens/5estrelas.png" alt="5 estrelas">
+                        </div>
+                        <div class="nome">WAGNER</div>
+                        <div class="local">Porto Alegre RS</div>
+                    </div>
+                    <div class="avaliacaobox">
+                        <div class="avaliacaoimgbox"><img class="pessoa" src="imagens/robson.png" alt="Robson"></div>
+                        <div class="comentario">"Linha de utilidades domésticas com grande varidade. Qualidade e
+                            funcionalidade representam a marca MILEVA."</div>
+                        <div class="avaliacaoimgbox"><img class="estrelas" src="imagens/5estrelas.png" alt="5 estrelas">
+                        </div>
+                        <div class="nome">ROBSON</div>
+                        <div class="local">Caxias do Sul RS</div>
+                    </div>
+                    <div class="avaliacaobox">
+                        <div class="avaliacaoimgbox"><img class="pessoa" src="imagens/everton.png" alt="Éverton"></div>
+                        <div class="comentario">"Produtos de ótima qualidade. Atendimento excepcional."</div>
+                        <div class="avaliacaoimgbox"><img class="estrelas" src="imagens/5estrelas.png" alt="5 estrelas">
+                        </div>
+                        <div class="nome">ÉVERTON</div>
+                        <div class="local">Farroupilha RS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Foi criada a section de classe "final row" pois precisava que algumas propriedades relacionadas a fonte, cores e padding fossem diferentes da "row" neste bloco. Da mesma forma foi criada a div de classe "container fin", pois precisava que o texto <p> ficasse numa linha diferente que o botão CADASTRE-SE.-->
+        <section class="final row">
+            <div class="container fin">
+                <p>Descubra a facilidade na limpeza com Mileva! <img src="imagens/coracaomileva.png" alt="Coração Mileva">
+                </p>
+                <div class="cadastrar"><a href="javascript:void(0)" class="cadastro">CADASTRE-SE</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="row">
+        <p>*Desconto de 20% válido para compras acima de R$100,00.</p>
+    </footer>
+</body>
+
+</html>

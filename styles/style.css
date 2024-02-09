@@ -1,0 +1,980 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Coda&display=swap');
+
+:root{
+    --branco:#FFFFFF;
+    --verde-claro:#D1F7B3;
+    --verde-limao:#3FAC14;
+    --verde-escuro:#2F7B14;
+    --preto:#010C00;
+    --vermelho:#DC2624;
+    
+    --fonte-padrao: 'Coda', 'cursive';
+    --fonte-especial: 'Caveat', 'cursive';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--fonte-padrao); 
+}
+
+.row {
+    padding: 0 15px;
+    width: 100%; /*define a largura do elemento como 100% da largura do elemento pai*/
+}
+
+.container {
+    display: flex; /*define o elemento como um contêiner flexível. Isso significa que os elementos filhos do contêiner serão dispostos de acordo com as propriedades flex-direction, flex-wrap, justify-content e align-items*/
+    flex-direction: row; /*define a direção*/
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* inicio nav */
+nav {
+    align-items: center;
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+}
+
+nav > img {
+    height: 32px;
+}
+
+.cadastrar {
+    align-items: center;  
+    background-color: var(--verde-limao);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /*deslocamento horizontal, deslocamento vertical, desfoque da sombra, propagação da sombra, cor da sombra*/
+    font-family: var(--fonte-padrao);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.85px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+a.cadastro {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.cadastrar:hover {
+    background-color: var(--verde-escuro);
+    transition-duration: 0.5s;
+}
+
+.cadastrar.entrar {
+    background: var(--branco);
+    box-shadow: none;
+    margin-left: auto;
+}
+
+a.cadastro.entre {
+    color: var(--verde-limao); 
+}
+
+a.cadastro.entre:hover {
+    color: var(--verde-escuro);
+    transition-duration: 0.5s;
+}
+/* fim nav */
+
+/* inicio div promocional */
+.promocional {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+/* fim div promocional */
+
+/* inicio header */
+header {
+    background-color: var(--verde-claro);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+header p {
+    font-size: 2rem;
+    max-width: 500px;
+    text-align: center;
+}
+
+header .header-left {
+    align-items: center; /*centraliza os itens verticalmente*/
+    align-self: center; /*centraliza o item verticalmente, independentemente do alinhamento definido para os outros itens no contêiner*/
+    display: flex;
+    flex-direction: column;
+}
+
+header .header-right {
+    margin-left: auto;
+}
+
+header .header-text-mobile {
+    margin-bottom: 30px;
+}
+
+header .header-text-desktop {
+    margin-bottom: 30px;
+}
+/* fim header */
+
+/* inicio section caracteristicas */
+.caracteristicas {
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 40px 30px;
+}
+
+.caractgrid {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /*distribui o espaço disponível de maneira uniforme entre os itens, mas mantendo espaço mínimo no início e no final do contêiner*/
+    width: 100%;
+}
+
+.caractbox {
+    align-items: stretch; /*os itens no contêiner serão esticados verticalmente para ocupar toda a altura do contêiner ao longo do eixo transversal*/
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.caractimgbox {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+.caractimgbox img {
+    width: 125px;
+}
+
+.caractimgbox.desconto {
+    align-self: center;
+    background-color: var(--vermelho);
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: var(--branco);
+    flex-direction: column;
+    font-size: 1.8rem;
+    font-weight: 800;
+    height: 125px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 125px;
+}
+
+.caractimgbox.desconto img.peq {
+    width: 85px;
+}
+
+.titulocaract {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 10px;
+    text-align: center;
+}
+
+.textocaract {
+    font-size: 1.4rem;
+    text-align: center;
+}
+/* fim section caracteristicas */
+
+/* inicio section mixsolucoes */
+.mixsolucoes {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.mix {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mixsolucoes-text {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mixsolucoes-text h2 {
+    font-size: 2.5rem;
+}
+
+.mixsolucoes-text p {
+    font-size: 1.9rem;
+}
+
+.mixgrid {
+    display: flex;
+    flex-wrap: wrap; /*os itens dentro do contêiner flexível serão dispostos em várias linhas (ou colunas) quando não houver espaço suficiente para colocá-los todos em uma única linha (ou coluna)*/
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.mixbox {
+    align-items: stretch;
+    background-color: var(--branco);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+}
+
+.mixbox:first-child {
+    margin-left: 0; 
+}
+
+.mixbox:last-child {
+    margin-right: 0;
+}
+
+.miximgbox {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+.miximgbox img {
+    width: 200px;
+}
+
+.mixbox a {
+    background: var(--verde-claro);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--verde-escuro);
+    font-family: var(--fonte-padrao);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.85px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mixbox a:hover {
+    background: var(--verde-limao);
+    color: var(--branco); 
+}
+/* fim section mixsolucoes */
+
+/* inicio section avaliacoes */
+.avaliacoes {
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 50px;
+}
+
+.aval {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avaliacoes-text{
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+}
+
+.avaliacoes-text h2 {
+    font-size: 2.5rem;
+}
+
+.avaliacoes-text p {
+    font-size: 1.9rem;
+}
+
+.avaliacaogrid {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.avaliacaobox {
+    align-items: stretch;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.avaliacaoimgbox {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+.avaliacaoimgbox img.pessoa {
+    width: 150px;
+}
+
+.avaliacaoimgbox img.estrelas {
+    width: 130px;
+}
+
+.comentario {
+   font-size: 1.4rem;    
+}
+
+.nome {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.local {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+/* fim section avaliacoes */
+
+/* inicio section final */
+.final {
+    color: var(--branco);
+    background-color: var(--verde-escuro);
+    padding: 20px;
+}
+
+.fin {
+    align-items: center;
+    flex-direction: column;
+}
+
+.final p {
+    font-family: var(--fonte-especial);
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+.final img {
+    margin-left: 5px;
+    width: 40px;
+}
+/* fim section final */
+
+/* inicio footer */
+footer p {
+    font-size: 1.3rem;
+    padding: 7px 5px;
+    text-align: left;
+}
+/* fim footer */
+
+/* inicio media queries */
+@media only screen and (max-width: 480px) /*mobile - nos testes usei 500px*/ {
+    .container {
+        max-width: 480px; /*nos testes usei 500px*/
+    }
+
+    .cadastrar {
+        font-size: 1.2rem;
+    }
+
+    nav > img {
+        height: 27px; 
+    }
+
+    .promocional {
+        font-size: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.6rem;
+    }
+
+    header img {
+        width: 250px;
+    }
+
+    header .header-left {
+        margin: 20px 0 20px 10px;
+    }
+    
+    header .header-right {
+        align-self: center;
+        margin: 20px 10px 20px 5px;
+    }
+
+    .header-text-desktop {
+        display: none;
+    }
+
+    .header-text-mobile {
+        display: block;
+    }
+    
+    .caractgrid {
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .caractbox {
+        align-items: center;
+        background-color: var(--verde-claro);
+        border-radius: 100%;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+        padding: 10px 0 30px 0;
+        width: 300px;
+    }
+
+    .caractimgbox img {
+        width: 90px;   
+    }
+
+    .caractimgbox.desconto {
+        font-size: 1.4rem;
+        height: 95px;
+        max-width: 95px;
+        width: 95px;
+     }
+
+    .caractimgbox.desconto img.peq {
+        width: 60px;
+    }
+
+    .titulocaract {
+        font-size: 1.4rem;
+        
+    }
+    
+    .textocaract {
+        font-size: 1.3rem;
+        max-width: 200px;
+    }
+
+    .mixsolucoes-text h2 {
+        font-size: 2rem;
+    }
+    
+    .mixsolucoes-text p {
+        font-size: 1.5rem;
+    }
+
+    .mixgrid {
+        align-self: center;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .mixbox {
+        flex: 0 1 222px;
+        height: 200px;
+        justify-content: center;
+    }
+
+    .mixbox a {
+        font-size: 1.2rem;
+    }
+
+    .miximgbox {
+        padding: 0;
+    }
+
+    .miximgbox img {
+        width: 160px;
+    }
+
+    .avaliacoes-text h2 {
+        font-size: 2rem;
+    }
+    
+    .avaliacoes-text p {
+        font-size: 1.5rem;
+    }
+    
+    .avaliacaogrid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .avaliacaobox {
+        align-items: center;
+    }
+    
+    .avaliacaoimgbox img.pessoa {
+        width: 120px;
+    }
+    
+    .avaliacaoimgbox img.estrelas {
+        width: 100px;
+    }
+    
+    .comentario {
+       font-size: 1.2rem; 
+       max-width: 250px;  
+    }
+    
+    .nome {
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+    
+    .local {
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+
+    .final p {
+        font-size: 2.6rem;
+    }
+    
+    .final img {
+        width: 32px;
+    }
+        
+    footer p {
+        font-size: 1.1rem;
+    }
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) /*extra small devices - nos testes usei 501px*/ {
+        .container {
+            min-width: 481px; /*nos testes usei 501px*/
+            max-width: 767px;
+        }       
+
+        .cadastrar {
+            font-size: 1.2rem;
+        }
+    
+        nav > img {
+            height: 27px; 
+        }
+    
+        .promocional {
+            font-size: 1.2rem;
+        }
+    
+        header h1 {
+            font-size: 2rem;
+        }
+    
+        header p {
+            font-size: 1.6rem;
+        }
+    
+        header img {
+            width: 260px;
+        }
+    
+        header .header-left {
+            margin: 20px 0 20px 10px;
+        }
+        
+        header .header-right {
+            align-self: center;
+            margin: 20px 10px 20px 5px;
+        }
+
+        .header-text-desktop {
+            display: none;
+        }
+    
+        .header-text-mobile {
+            display: block;
+        }
+        
+        .caractgrid {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .caractbox {
+            align-items: center;
+        }
+    
+        .caractimgbox img {
+            width: 90px;   
+        }
+    
+        .caractimgbox.desconto {
+            font-size: 1.4rem;
+            height: 95px;
+            max-width: 95px;
+            width: 95px;
+         }
+    
+        .caractimgbox.desconto img.peq {
+            width: 60px;
+        }
+    
+        .titulocaract {
+            font-size: 1.4rem;
+            
+        }
+        
+        .textocaract {
+            font-size: 1.3rem;
+            max-width: 200px;
+        }
+  
+        .mixsolucoes-text h2 {
+            font-size: 2rem;
+        }
+        
+        .mixsolucoes-text p {
+            font-size: 1.5rem;
+        }
+    
+        .mixgrid {
+            align-self: center;
+            gap: 2rem;
+            justify-content: center;
+        }
+    
+        .mixbox {
+            flex: 0 1 222px;
+            height: 200px;
+            justify-content: center;
+        }
+    
+        .mixbox a {
+            font-size: 1.2rem;
+        }
+    
+        .miximgbox {
+            padding: 0;
+        }
+    
+        .miximgbox img {
+            width: 160px;
+        }
+    
+        .avaliacoes-text h2 {
+            font-size: 2rem;
+        }
+        
+        .avaliacoes-text p {
+            font-size: 1.5rem;
+        }
+        
+        .avaliacaogrid {
+            flex-wrap: nowrap;
+            gap: 3rem;
+            justify-content: center;
+        }
+    
+        .avaliacaobox {
+            align-items: center;
+        }
+        
+        .avaliacaoimgbox img.pessoa {
+            width: 120px;
+        }
+        
+        .avaliacaoimgbox img.estrelas {
+            width: 100px;
+        }
+        
+        .comentario {
+           font-size: 1.2rem;  
+        }
+        
+        .nome {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+        
+        .local {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+    
+        .final p {
+            font-size: 2.6rem;
+        }
+        
+        .final img {
+            width: 32px;
+        }
+            
+        footer p {
+            font-size: 1.1rem;
+        }
+    }
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1030px) /*small tablets - aumentei para 1031px por conta própria para adaptar melhor ao meu projeto */ {
+        .container {
+            min-width: 768px;
+            max-width: 991px;
+        }       
+
+        .cadastrar {
+            font-size: 1.3rem;
+        }
+    
+        nav > img {
+            height: 29px; 
+        }
+    
+        .promocional {
+            font-size: 1.3rem;
+        }
+    
+        header h1 {
+            font-size: 2.5rem;
+        }
+    
+        header p {
+            font-size: 1.8rem;
+        }
+    
+        header img {
+            width: 300px;
+        }
+    
+        header .header-left {
+            margin: 20px 0 20px 10px;
+        }
+        
+        header .header-right {
+            align-self: center;
+            margin: 20px 10px 20px 5px;
+        }
+
+        .header-text-desktop {
+            display: block;
+        }
+    
+        .header-text-mobile {
+            display: none;
+        }
+        
+        .caractgrid {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .caractbox {
+            align-items: center;
+        }
+    
+        .caractimgbox img {
+            width: 95px;   
+        }
+    
+        .caractimgbox.desconto {
+            font-size: 1.6rem;
+            height: 100px;
+            max-width: 100px;
+            width: 100px;
+         }
+    
+        .caractimgbox.desconto img.peq {
+            width: 65px;
+        }
+    
+        .titulocaract {
+            font-size: 1.5rem;
+        }
+        
+        .textocaract {
+            font-size: 1.4rem;
+            max-width: 200px;
+        }
+    
+        .mixsolucoes-text h2 {
+            font-size: 2.2rem;
+        }
+        
+        .mixsolucoes-text p {
+            font-size: 1.8rem;
+        }
+    
+        .mixgrid {
+            align-self: center;
+            gap: 2rem;
+            justify-content: center;
+        }
+    
+        .mixbox {
+            flex: 0 1 222px;
+            height: 200px;
+            justify-content: center;
+        }
+    
+        .mixbox a {
+            font-size: 1.3rem;
+        }
+    
+        .miximgbox {
+            padding: 0;
+        }
+    
+        .miximgbox img {
+            width: 170px;
+        }
+    
+        .avaliacoes-text h2 {
+            font-size: 2.2rem;
+        }
+        
+        .avaliacoes-text p {
+            font-size: 1.8rem;
+        }
+        
+        .avaliacaogrid {
+            gap: 3rem;
+            justify-content: center;
+        }
+    
+        .avaliacaobox {
+            align-items: center;
+        }
+        
+        .avaliacaoimgbox img.pessoa {
+            width: 120px;
+        }
+        
+        .avaliacaoimgbox img.estrelas {
+            width: 100px;
+        }
+        
+        .comentario {
+           font-size: 1.3rem;  
+        }
+        
+        .nome {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        
+        .local {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+    
+        .final p {
+            font-size: 2.8rem;
+        }
+        
+        .final img {
+            width: 32px;
+        }
+            
+        footer p {
+            font-size: 1.1rem;
+        }
+    }
+    
+    @media only screen and (min-width: 1031px) /* large tablets/laptops, desktops, extra large screens - aumentei para 1031px por conta própria para adaptar melhor ao meu projeto */ {
+        .container {
+            min-width: 992px;
+        }
+        
+        .header-text-desktop {
+            display: block;
+        }
+    
+        .header-text-mobile {
+            display: none;
+        }     
+    }
+    /* fim media queries */
+
+
+    /* Não criei as 3 últimas media queries pois não achei necessário
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) large tablets/laptops {
+        .container {
+            min-width: 992px;
+            max-width: 1199px;
+        }  
+
+        .header-text-desktop {
+            display: block;
+        }
+    
+        .header-text-mobile {
+            display: none;
+        }    
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1919px) desktops {
+        .container {
+            min-width: 1200px;
+            max-width: 1919px;
+        }  
+
+        .header-text-desktop {
+            display: block;
+        }
+    
+        .header-text-mobile {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1920px) extra large screens {
+        .container {
+            min-width: 1920px;
+        }  
+
+        .header-text-desktop {
+            display: block;
+        }
+    
+        .header-text-mobile {
+            display: none;
+        }
+    }
+    */
