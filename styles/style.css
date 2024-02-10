@@ -458,11 +458,11 @@ footer p {
     }
 
     .header-text-desktop {
-        display: none;
+        display: block;
     }
 
     .header-text-mobile {
-        display: block;
+        display: none;
     }
     
     .caractgrid {
