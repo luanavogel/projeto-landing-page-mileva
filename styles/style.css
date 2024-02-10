@@ -431,6 +431,11 @@ footer p {
         font-size: 1.2rem;
     }
 
+    header .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -449,7 +454,7 @@ footer p {
     
     header .header-right {
         align-self: center;
-        margin: 20px 10px 20px 5px;
+        margin: 0px 10px 10px 5px;
     }
 
     .header-text-desktop {
@@ -492,7 +497,6 @@ footer p {
 
     .titulocaract {
         font-size: 1.4rem;
-        
     }
     
     .textocaract {
@@ -573,7 +577,7 @@ footer p {
     }
 
     .final p {
-        font-size: 2.6rem;
+        font-size: 2rem;
     }
     
     .final img {
